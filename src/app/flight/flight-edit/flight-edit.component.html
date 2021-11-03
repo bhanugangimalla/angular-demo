@@ -1,0 +1,40 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active">Sensors</li>
+  </ol>
+</nav>
+<h2>Sensors Detail</h2>
+<div *ngIf="feedback.length" class="alert alert-{{feedback.type}}">{{ feedback.message }}</div>
+<form *ngIf="flight" #editForm="ngForm" (ngSubmit)="save()">
+
+  <div class="form-group">
+    <label for="SensorName">SensorName</label>
+    <input type="text" [(ngModel)]="flight.SensorName" id="SensorName" name="SensorName" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="Unit">Unit</label>
+    <input type="text" [(ngModel)]="flight.Unit" id="Unit" name="Unit" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="LocationName">LocationName</label>
+    <input type="text" [(ngModel)]="flight.LocationName" id="LocationName" name="LocationName" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="Temperature">Temperature</label>
+    <input type="text" [(ngModel)]="flight.Temperature" id="Temperature" name="Temperature" class="form-control">
+  </div>
+  
+  <div class="form-group">
+    <label for="Humidity">Humidity</label>
+    <input type="text" [(ngModel)]="flight.Humidity" id="Humidity" name="Humidity" class="form-control">
+  </div>
+
+  <div class="btn-group mt-3" role="group">
+    <button type="submit" class="btn btn-primary" [disabled]="!editForm.form.valid">Save</button>
+    <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+  </div>
+</form>
