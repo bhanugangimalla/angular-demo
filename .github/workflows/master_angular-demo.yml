@@ -53,4 +53,4 @@ jobs:
           app-name: 'angular-demo'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_013BF18935DE4EDDB79FB9A6EFCFB9EF }}
-          package: .
+          package: .dist/demo
