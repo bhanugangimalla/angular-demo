@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'WebAppPOCUI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_14C7A4BABA834B6EA1EE30B2BCE323C6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FAA326622E2B4A6E932FAD7537C2E3DA }}
           package: .
